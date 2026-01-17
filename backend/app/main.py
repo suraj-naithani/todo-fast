@@ -7,11 +7,17 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
+
+@app.get("/")
+def root():
+    return {"message": "FastAPI Backend is running", "docs": "/docs"}
+
+
 # ✅ Add CORS Middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://todo-fast-frontend-i93z21irn-surajs-projects.vercel.app",
+        "https://todo-fast-frontend.vercel.app/",
         "http://localhost:3000",  # For local development
     ],
     allow_credentials=True,

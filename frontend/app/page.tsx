@@ -9,7 +9,7 @@ interface Task {
   completed: boolean;
 }
 
-const API_URL = 'todo-fast-jw86odbol-surajs-projects.vercel.app';
+const API_URL = 'https://todo-fast-jw86odbol-surajs-projects.vercel.app';
 
 export default function Home() {
   const [tasks, setTasks] = useState<Task[]>([]);
